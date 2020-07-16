@@ -23,10 +23,12 @@ public class Street {
         houses.add(house);
     }
 
-    public void rename(String newName) {
+    public boolean rename(String newName) {
         if(isStringOnlyLetters(newName)) {
             name = newName;
+            return true;
         }
+        return false;
     }
 
     private boolean isStringOnlyLetters(String str) {

@@ -1,0 +1,11 @@
+This is the user story too of the project too!
+
+***
+The job of our software to store streets with their houses and residents.
+
+When a street is registered in the system they have an original name and optionally some house pre-built on them. Street's name can contain only letters. The street can get a new name in the future and new houses can be built on it.
+**
+A house has an address number (it is mandatory!), can have one owner and several residents. When a person buys the house (s)he becomes the owner. Residents can move into the house anytime.
+
+A person can be an owner of several houses but resident jus one of them. Every person has a name and also, they know about the properties they bought.
+***
