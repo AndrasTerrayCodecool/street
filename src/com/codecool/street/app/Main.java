@@ -2,7 +2,7 @@ package com.codecool.street.app;
 
 import com.codecool.street.Street;
 import com.codecool.street.house.House;
-import com.codecool.street.person.Person;
+import com.codecool.street.house.Person;
 
 public class Main {
 
@@ -12,12 +12,16 @@ public class Main {
         House kossuth14 = new House(14);
 
         Street kossuthStreet = new Street("Kossuth", kossuth12, kossuth14);
+        Street petofiStreet;
+        new Street("Petofi");
 
         Person richieRich = new Person("Richie Rich");
-        kossuth12.buyBy(richieRich);
-        kossuth14.buyBy(richieRich);
+        kossuth12.moveIn(richieRich);
+        richieRich.buy(kossuth12);
+        richieRich.buy(kossuth14);
 
-        Person residentEvil = new Person("Resident Evil");
-        kossuth12.moveIn(residentEvil);
+        kossuth14.moveIn(new Person("Resident Evil"));
+
+        System.out.println("Check object relationships here! :)");
     }
 }

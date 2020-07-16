@@ -1,7 +1,5 @@
 package com.codecool.street.house;
 
-import com.codecool.street.person.Person;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,7 +16,7 @@ public class House {
         residents.add(resident);
     }
 
-    public void buyBy(Person newOwner) {
+    protected void buyBy(Person newOwner) {
         owner = newOwner;
     }
 }

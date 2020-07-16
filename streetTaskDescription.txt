@@ -1,11 +1,40 @@
-This is the user story too of the project too!
-
-***
+Story:
 The job of our software to store streets with their houses and residents.
 
 When a street is registered in the system they have an original name and optionally some house pre-built on them. Street's name can contain only letters. The street can get a new name in the future and new houses can be built on it.
-**
+
 A house has an address number (it is mandatory!), can have one owner and several residents. When a person buys the house (s)he becomes the owner. Residents can move into the house anytime.
 
 A person can be an owner of several houses but resident jus one of them. Every person has a name and also, they know about the properties they bought.
 ***
+
+What are you going to learn?
+- Has a relationship between classes/objects
+- Difference between a static class diagram and runtime instances created from classes (aka templates/blueprints)
+- Debugging in the IDE
+- Objects in the heap memory and how to check them in IDEA
+- IDEA built-in class diagram
+***
+
+Tasks
+- Class diagram - static
+    - Check the given class diagram (street.drawio in project root) by open it in https://app.diagrams.net/
+    - Take special attention for "has a" relationships between classes (aggregation)
+    - Extend the code with the missing methods (check IDEA built-in class diagram for differences). If everything is ready then the main method can be compiled.
+    - **Be aware:** it only refers to connections between the classes (aka templates/blueprints) and these connections will or will not exist between **real object** instantiated from these classes during runtime based on the actual program code
+
+- Objects during runtime - dynamic
+    - Go through the code step by step with debugging with special attention on:
+        - where are instance creations? (constructor calls)
+        - which are the lines where different objects are connected with "has a" connections
+        - Person.java 18th line: what is "this"?
+    - Draw an object relationship diagram about the objects' state at the end of the main method
+        - it helps if you put a debug point on the last line of the main method and check connections between objects with special attention on cyclic references between owner and property
+        - example of a simple diagram: https://docs.oracle.com/javase/tutorial/figures/java/objects-multipleRefs.gif (from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html)
+
+- Check memory tab during debug: https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html
+
+Hints/Background material:
+- https://learn.code.cool/full-stack/#/../pages/java/creating-objects
+- Especially from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- Some links above
