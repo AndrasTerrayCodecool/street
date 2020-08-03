@@ -1,40 +1,52 @@
 Story:
-The job of our software to store streets with their houses and residents.
+The job of our software to store streets with their houses, residents and owners.
 
-When a street is registered in the system they have an original name and optionally some house pre-built on them. Street's name can contain only letters. The street can get a new name in the future and new houses can be built on it.
+When a street is registered in the system they have an original name and optionally some house pre-built on them.
+Street's name can contain only letters! They can be renamed in the future, also, new houses can be built on them.
 
-A house has an address number (it is mandatory!), can have one owner and several residents. When a person buys the house (s)he becomes the owner. Residents can move into the house anytime.
+A house has an address number (it is mandatory!), can have one owner and several residents.
+When a person buys the house (s)he becomes the owner. Residents can move into the house anytime.
 
-A person can be an owner of several houses but resident jus one of them. Every person has a name and also, they know about the properties they bought.
+A person can be an owner of several houses but resident just one of them.
+Every person has a name and also, they know about the properties they bought.
 ***
 
 What are you going to learn?
-- Has a relationship between classes/objects
-- Difference between a static class diagram and runtime instances created from classes (aka templates/blueprints)
+- "Has a" relationship between classes/objects
+- Difference between a static class diagram and runtime instances created from classes
 - Debugging in the IDE
-- Objects in the heap memory and how to check them in IDEA
-- IDEA built-in class diagram
+- Objects in the heap memory and how to check them in IDE
+- IDE built-in class diagram
+- Var args
 ***
 
 Tasks
-- Class diagram - static
+- Class diagram (static view of your classes)
     - Check the given class diagram (street.drawio in project root) by open it in https://app.diagrams.net/
-    - Take special attention for "has a" relationships between classes (aggregation)
-    - Extend the code with the missing methods (check IDEA built-in class diagram for differences). If everything is ready then the main method can be compiled.
-    - **Be aware:** it only refers to connections between the classes (aka templates/blueprints) and these connections will or will not exist between **real object** instantiated from these classes during runtime based on the actual program code
+    - Extend the code with the missing methods. If everything is ready then the application can be compiled successfully
 
-- Objects during runtime - dynamic
-    - Go through the code step by step with debugging with special attention on:
-        - where are instance creations? (constructor calls)
-        - which are the lines where different objects are connected with "has a" connections
-        - Person.java 18th line: what is "this"?
-    - Draw an object relationship diagram about the objects' state at the end of the main method
-        - it helps if you put a debug point on the last line of the main method and check connections between objects with special attention on cyclic references between owner and property
-        - example of a simple diagram: https://docs.oracle.com/javase/tutorial/figures/java/objects-multipleRefs.gif (from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html)
+- Objects during runtime - (dynamic view of our objects)
+    - Go through the code step by step with debugging:
+        - where are instance creations? Comment that lines with "// Object creation" comments! (constructor calls)
+        - which are the lines where different objects are connected with "has a" connections? Comment that lines with "// <class> instance has a <class>" comments! Example: "// Street instance has a House"
+        - In Person.java what is "this"?
+    - Draw an object relationship hierarchy about the objects' state at the end of the main method
+        - Has a Draw.io diagram saved into your repository with the object relationship hierarchy
 
-- Check memory tab during debug: https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html
+Hints:
+Static class diagram:
+- In draw.io, take special attention for "has a" relationships between the classes
+- To find missing methods, you can use the IDE built in Class diagram editor to compare recent class hierarchy to the planned UML class diagram (draw.io)
+- UML class diagram is a static diagram about the connections between the classes. These connections will or will not exist between the **real object** instantiated from these classes during runtime.
+In this case, static means "without running the application"
 
-Hints/Background material:
+Dynamic object hierarchy:
+- Debug!! For example, put a debug point on the last line of the main method and check connections between objects (take care of cyclic references between owner and property)
+- Example of a simple object reference hierarchy: https://docs.oracle.com/javase/tutorial/figures/java/objects-multipleRefs.gif (from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html)
+- Check memory tab during debug to see how many objects you have: https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html
+
+
+Background material:
 - https://learn.code.cool/full-stack/#/../pages/java/creating-objects
-- Especially from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
-- Some links above
+- Part of the above page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- Var args: http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html#varargs
