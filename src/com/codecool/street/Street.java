@@ -14,11 +14,6 @@ public class Street {
         this.name = name;
     }
 
-    public Street(String name, House... houses) {
-        rename(name);
-        Collections.addAll(this.houses, houses);
-    }
-
     public void build(House house) {
         houses.add(house);
     }
@@ -32,6 +27,7 @@ public class Street {
     }
 
     private boolean isStringOnlyLetters(String str) {
-        return ((str != null) && (!"".equals(str)) && (str.matches("^[a-zA-Z]*$")));
+        // TODO
+        return true;
     }
 }

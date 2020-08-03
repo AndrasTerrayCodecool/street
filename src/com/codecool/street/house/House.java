@@ -6,7 +6,6 @@ import java.util.Set;
 public class House {
     private int address;
     private Person owner;
-    private Set<Person> residents = new HashSet<>();
 
     public House(int address) {
         this.address = address;
@@ -16,7 +15,4 @@ public class House {
         residents.add(resident);
     }
 
-    protected void buyBy(Person newOwner) {
-        owner = newOwner;
-    }
 }
