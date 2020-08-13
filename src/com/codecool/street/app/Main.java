@@ -15,6 +15,10 @@ public class Main {
         Street petofiStreet;
         new Street("Petofi");
 
+        if (!kossuthStreet.rename("Square of 56ers")) {
+            System.out.println("Great! Rename validation is working! :) ");
+        }
+
         Person richieRich = new Person("Richie Rich");
         kossuth12.moveIn(richieRich);
         richieRich.buy(kossuth12);
