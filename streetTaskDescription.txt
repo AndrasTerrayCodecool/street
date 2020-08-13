@@ -24,6 +24,7 @@ Tasks
 - Class diagram (static view of your classes)
     - Check the given class diagram (street.drawio in project root) by open it in https://app.diagrams.net/
     - Extend the code with the missing methods. If everything is ready then the application can be compiled successfully
+        - Application runtime log contains the following string: "Great! Rename validation is working! :) "
 
 - Objects during runtime - (dynamic view of our objects)
     - Go through the code step by step with debugging:
@@ -31,7 +32,9 @@ Tasks
         - which are the lines where different objects are connected with "has a" connections? Comment that lines with "// <class> instance has a <class>" comments! Example: "// Street instance has a House"
         - In Person.java what is "this"?
     - Draw an object relationship hierarchy about the objects' state at the end of the main method
-        - Has a Draw.io diagram saved into your repository with the object relationship hierarchy
+        - "street_object_relationships.drawio" diagram completed to contain the object relationships at the end of the main method. The finished and finalized version of this diagram can be found in the repo.
+
+
 
 Hints:
 Static class diagram:
@@ -39,14 +42,18 @@ Static class diagram:
 - To find missing methods, you can use the IDE built in Class diagram editor to compare recent class hierarchy to the planned UML class diagram (draw.io)
 - UML class diagram is a static diagram about the connections between the classes. These connections will or will not exist between the **real object** instantiated from these classes during runtime.
 In this case, static means "without running the application"
+- Vararg can be used when the number of the parameters of the method from the same type is not known in advance (can be 0 .. *). In the actual exercise: Street constructor
 
 Dynamic object hierarchy:
 - Debug!! For example, put a debug point on the last line of the main method and check connections between objects (take care of cyclic references between owner and property)
 - Example of a simple object reference hierarchy: https://docs.oracle.com/javase/tutorial/figures/java/objects-multipleRefs.gif (from this page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html)
+- "street_object_relationships.drawio" can be used to understand the requirements as it shows a partial solution until the line 15th of the main method
 - Check memory tab during debug to see how many objects you have: https://www.jetbrains.com/help/idea/analyze-objects-in-the-jvm-heap.html
 
 
 Background material:
+- Open project in IntelliJ IDEA - https://learn.code.cool/full-stack/#/../pages/tools/open-project-in-intellij-idea
 - https://learn.code.cool/full-stack/#/../pages/java/creating-objects
 - Part of the above page: https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
 - Var args: http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html#varargs
+- (Nice to have) How to compile and run Java - https://learn.code.cool/full-stack/#/../pages/java/how-to-compile-and-run-java
