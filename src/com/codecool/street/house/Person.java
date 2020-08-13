@@ -1,7 +1,5 @@
 package com.codecool.street.house;
 
-import com.codecool.street.house.House;
-
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,8 +1,5 @@
 package com.codecool.street.house;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class House {
     private int address;
     private Person owner;

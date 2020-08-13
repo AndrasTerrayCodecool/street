@@ -2,7 +2,6 @@ package com.codecool.street;
 
 import com.codecool.street.house.House;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
